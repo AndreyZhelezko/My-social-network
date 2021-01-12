@@ -1,11 +1,11 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import Header from './components/Header/Header';
+import Content from './components/Content/Content';
 import Aside from './components/Aside/Aside';
-import Profile from './components/Profile/Profile';
-import Dialogs from './components/Dialogs/Dialogs';
 import Footer from './components/Footer/Footer';
 import './App.css';
+
 
 const App = () => {
 	return (
@@ -13,10 +13,7 @@ const App = () => {
 			<div className="wraper_App">
 				<Header />
 				<main className="main">
-					<div className="content">
-						<Route path='/profile' component={Profile} />
-						<Route path='/dialogs' component={Dialogs} />
-					</div>
+					<Content />
 					<Aside />
 				</main>
 				<Footer />
