@@ -9,7 +9,7 @@ const Aside = () => {
 			<nav className={modClass.nav}>
 				<NavLink exact to='/' activeClassName={modClass.active}>Home</NavLink>
 				<NavLink to='/profile' activeClassName={modClass.active}>Profile</NavLink>
-				<NavLink to='/Dialogs' activeClassName={modClass.active}>Dialogs</NavLink>
+				<NavLink to='/dialogs' activeClassName={modClass.active}>Dialogs</NavLink>
 			</nav>
 		</aside>
 	);

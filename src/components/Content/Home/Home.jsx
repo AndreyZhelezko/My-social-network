@@ -4,7 +4,7 @@ import modClass from './Home.module.css';
 
 const Home = () => {
 	return (
-		<div className={modClass.home}>
+		<div className={modClass.wrapper}>
 			Home page
 		</div>
 	);
