@@ -13,8 +13,8 @@ const App = () => {
 			<div className="wraper_App">
 				<Header />
 				<main className="main">
-					<Content />
 					<Aside />
+					<Content />
 				</main>
 				<Footer />
 			</div>

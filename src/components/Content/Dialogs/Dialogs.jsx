@@ -3,7 +3,7 @@ import modClass from './Dialogs.module.css';
 
 const Dialogs = () => {
 	return (
-		<div className={modClass.wraper}>
+		<div className={modClass.wrapper}>
 			Dialogs block content
 		</div>
 	);

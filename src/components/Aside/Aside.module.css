@@ -1,4 +1,12 @@
-.wraper {
+.wrapper {
 	width: 30%;
 	background: #ffebb7;
+}
+
+.nav a {
+	margin: 0 5px;
+	color: #fff;
+}
+.nav a.active {
+	color: green;
 }
