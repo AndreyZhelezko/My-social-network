@@ -18,7 +18,6 @@ const App = () => {
 						<Route path='/dialogs' component={Dialogs} />
 					</div>
 					<Aside />
-					\яч
 				</main>
 				<Footer />
 			</div>
