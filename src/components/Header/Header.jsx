@@ -1,13 +1,16 @@
 import React from 'react';
-import ThemeSwitcher from "react-theme-switcher";
+import logo from '../../images/logo.png';
 import modClass from './Header.module.css'
+import SwitchTheme from "./SwitchTheme/SwithTheme";
 
 
 const Header = () => {
 	return (
 		<header className={modClass.wrapper}>
-			sasd
-			<ThemeSwitcher />
+			<a href="/">
+				<img src={logo} alt="as"/>
+			</a>
+			<SwitchTheme />
 		</header>
 	)
 }
