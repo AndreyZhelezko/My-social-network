@@ -10,7 +10,7 @@ import './App.css';
 const App = () => {
 	return (
 		<BrowserRouter>
-			<div className="wraper_App">
+			<div className="wrapper_App">
 				<Header />
 				<main className="main">
 					<Aside />
