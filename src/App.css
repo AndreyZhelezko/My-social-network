@@ -17,4 +17,5 @@
 	display: flex;
 	/* flex-wrap: wrap; */
 	grid-area: main;
+	box-shadow: 0 0 5px #747474;
 }

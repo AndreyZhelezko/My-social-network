@@ -1,13 +1,25 @@
 .wrapper {
-	width: 30%;
+	width: 20%;
+	padding: 20px;
+	border-right: 1px solid #747474;
+}
+
+.nav  {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.nav a {
+	text-decoration: initial;
 }
 
 body[data-theme='dark'] .nav a {
-	margin: 0 5px;
-	color: #fff;
+	margin: 5px;
+	color: #F2DBC3;
 }
 body[data-theme='dark'] .nav a.active {
-	color: green;
+	color: #FFAC53;
 }
 
 body[data-theme='light'] .nav a {

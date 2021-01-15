@@ -11,7 +11,7 @@ const SwitchTheme = () => {
                 darkColor="#282c34"
                 lightColor="#c1c1c1"
                 lightTextColor="#272b33"
-                darkTextColor="#ffffff"
+                darkTextColor="#F2DBC3"
             />
             Dark
         </div>
