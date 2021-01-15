@@ -1,4 +1,15 @@
 .wrapper {
-	background: #9ddcdc;
 	grid-area: header;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 0;
 }
+
+body[data-theme='dark'] .wrapper a img {
+	filter: invert(100%);
+}
+
+/*body[data-theme='light'] {*/
+
+/*}*/

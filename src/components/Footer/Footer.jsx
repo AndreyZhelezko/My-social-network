@@ -3,7 +3,7 @@ import modClass from './Footer.module.css'
 
 const Footer = () => {
 	return (
-		<footer className={modClass.wraper}>
+		<footer className={modClass.wrapper}>
 			Footer block content
 		</footer>
 	);

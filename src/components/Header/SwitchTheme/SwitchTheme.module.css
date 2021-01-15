@@ -1,0 +1,25 @@
+.wrapper {
+    display: flex;
+}
+.wrapper button {
+    margin: 0 5px;
+}
+.wrapper button:focus {
+    outline: none;
+}
+
+body[data-theme='light'] .wrapper button {
+    background: #919191;
+}
+
+body[data-theme='light'] .wrapper button::after {
+    background: #747474;
+}
+
+body[data-theme='dark'] .wrapper button {
+    background: #918375;
+}
+
+body[data-theme='dark'] .wrapper button::after {
+    background: #F2DBC3;
+}
