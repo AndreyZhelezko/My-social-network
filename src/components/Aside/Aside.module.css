@@ -12,10 +12,10 @@
 
 .nav a {
 	text-decoration: initial;
+	margin: 5px;
 }
 
 body[data-theme='dark'] .nav a {
-	margin: 5px;
 	color: #F2DBC3;
 }
 body[data-theme='dark'] .nav a.active {
@@ -23,7 +23,6 @@ body[data-theme='dark'] .nav a.active {
 }
 
 body[data-theme='light'] .nav a {
-	margin: 0 5px;
 	color: #000;
 }
 body[data-theme='light'] .nav a.active {
