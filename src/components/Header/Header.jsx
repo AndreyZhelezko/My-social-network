@@ -8,7 +8,6 @@ const Header = () => {
 	return (
 		<header className={modClass.wrapper}>
 			<a href="/">
-
 				<img src={logo} alt="as"/>
 			</a>
 			<SwitchTheme />

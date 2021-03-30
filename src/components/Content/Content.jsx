@@ -1,17 +1,21 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import modClass from './Content.module.css';
-import Home from './Home/Home';
 import Profile from './Profile/Profile';
-import Dialogs from './Dialogs/Dialogs';
+import Messages from './Messages/Messages';
+import News from './News/News';
+import Music from './Music/Music';
+import Settings from './Settings/Settings';
 
 
-const Content = () => {
+const Content = (props) => {
 	return (
 		<div className={modClass.wrapper}>
-			<Route exact path='/' component={Home} />
-			<Route path='/Profile' component={Profile} />
-			<Route path='/dialogs' component={Dialogs} />
+			<Route exact path='/' component={Profile} />
+			<Route path='/Messages' component={Messages} />
+			<Route path='/News' component={News} />
+			<Route path='/Music' component={Music} />
+			<Route path='/Settings' component={Settings} />
 		</div>
 	);
 }

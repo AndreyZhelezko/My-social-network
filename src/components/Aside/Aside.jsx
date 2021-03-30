@@ -7,9 +7,11 @@ const Aside = () => {
 	return (
 		<aside className={modClass.wrapper}>
 			<nav className={modClass.nav}>
-				<NavLink exact to='/' activeClassName={modClass.active}>Home</NavLink>
-				<NavLink to='/profile' activeClassName={modClass.active}>Profile</NavLink>
-				<NavLink to='/dialogs' activeClassName={modClass.active}>Dialogs</NavLink>
+				<NavLink exact to='/' activeClassName={modClass.active}>Profile</NavLink>
+				<NavLink to='/Messages' activeClassName={modClass.active}>Messages</NavLink>
+				<NavLink to='/News' activeClassName={modClass.active}>News</NavLink>
+				<NavLink to='/Music' activeClassName={modClass.active}>Music</NavLink>
+				<NavLink to='/Settings' activeClassName={modClass.active}>Settings</NavLink>
 			</nav>
 		</aside>
 	);
