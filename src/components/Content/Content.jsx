@@ -12,10 +12,10 @@ const Content = (props) => {
 	return (
 		<div className={modClass.wrapper}>
 			<Route exact path='/' component={Profile} />
-			<Route path='/Messages' component={Messages} />
-			<Route path='/News' component={News} />
-			<Route path='/Music' component={Music} />
-			<Route path='/Settings' component={Settings} />
+			<Route path='/messages' component={Messages} />
+			<Route path='/news' component={News} />
+			<Route path='/music' component={Music} />
+			<Route path='/settings' component={Settings} />
 		</div>
 	);
 }

@@ -1,0 +1,19 @@
+.dialog {
+    text-decoration: none;
+}
+
+body[data-theme='light'] .dialog {
+    color: #000;
+}
+
+body[data-theme='dark'] .dialog {
+    color: #F2DBC3;
+}
+
+body[data-theme='light'] .dialog.active {
+    color: green;
+}
+
+body[data-theme='dark'] .dialog.active {
+    color: #FFAC53;
+}

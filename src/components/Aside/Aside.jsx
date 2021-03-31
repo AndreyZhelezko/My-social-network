@@ -8,10 +8,10 @@ const Aside = () => {
 		<aside className={modClass.wrapper}>
 			<nav className={modClass.nav}>
 				<NavLink exact to='/' activeClassName={modClass.active}>Profile</NavLink>
-				<NavLink to='/Messages' activeClassName={modClass.active}>Messages</NavLink>
-				<NavLink to='/News' activeClassName={modClass.active}>News</NavLink>
-				<NavLink to='/Music' activeClassName={modClass.active}>Music</NavLink>
-				<NavLink to='/Settings' activeClassName={modClass.active}>Settings</NavLink>
+				<NavLink to='/messages' activeClassName={modClass.active}>Messages</NavLink>
+				<NavLink to='/news' activeClassName={modClass.active}>News</NavLink>
+				<NavLink to='/music' activeClassName={modClass.active}>Music</NavLink>
+				<NavLink to='/settings' activeClassName={modClass.active}>Settings</NavLink>
 			</nav>
 		</aside>
 	);
