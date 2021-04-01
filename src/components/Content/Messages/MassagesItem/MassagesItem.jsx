@@ -4,7 +4,7 @@ import modClass from './MassagesItem.module.css';
 function MassagesItem(props) {
     return (
         <li className={modClass.massage}>
-            {props.message}
+            { props.message }
         </li>
     );
 }

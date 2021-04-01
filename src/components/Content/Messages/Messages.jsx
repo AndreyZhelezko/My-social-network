@@ -5,23 +5,34 @@ import MassagesItem from "./MassagesItem/MassagesItem";
 
 
 const Messages = () => {
-	return (
-		<div className={modClass.wrapper}>
-			<ul className={modClass.dialogs_wrapper}>
-				<DialogItem name='Dimych' id='1'/>
-				<DialogItem name='Andrey' id='2'/>
-				<DialogItem name='Sveta' id='3'/>
-				<DialogItem name='Sasha' id='4'/>
-				<DialogItem name='Viktor' id='5'/>
-				<DialogItem name='Valera' id='6'/>
-			</ul>
-			<ul className={modClass.massages_wrapper}>
-				<MassagesItem message='Hi'/>
-				<MassagesItem message='How it your it-kamasutra'/>
-				<MassagesItem message='Yo'/>
-			</ul>
-		</div>
-	);
+    let dialogsData = [
+        {id: 1, name: 'Dimych'},
+        {id: 2, name: 'Andrey'},
+        {id: 3, name: 'Sveta'},
+        {id: 4, name: 'Sasha'},
+        {id: 5, name: 'Viktor'},
+        {id: 6, name: 'Valera'},
+    ]
+
+    let massagesData = [
+        {id: 1, message: 'Hi'},
+        {id: 2, message: 'How it your it-kamasutra'},
+        {id: 3, message: 'Yo'}
+    ]
+
+	let dialogsElements = dialogsData.map( dialog => <DialogItem name={dialog.name} id={dialog.id} /> )
+	let massagesElements = massagesData.map( massages => <MassagesItem message={massages.message} id={massages.id} /> )
+
+    return (
+        <div className={modClass.wrapper}>
+            <ul className={modClass.dialogs_wrapper}>
+				{ dialogsElements }
+            </ul>
+            <ul className={modClass.massages_wrapper}>
+				{ massagesElements }
+            </ul>
+        </div>
+    );
 }
 
 export default Messages;
