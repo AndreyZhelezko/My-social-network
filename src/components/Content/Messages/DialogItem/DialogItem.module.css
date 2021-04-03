@@ -1,5 +1,8 @@
 .dialog {
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin: 0 0 15px 0;
 }
 
 body[data-theme='light'] .dialog {
@@ -16,4 +19,22 @@ body[data-theme='light'] .dialog.active {
 
 body[data-theme='dark'] .dialog.active {
     color: #FFAC53;
+}
+
+.wrapper_logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper_logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

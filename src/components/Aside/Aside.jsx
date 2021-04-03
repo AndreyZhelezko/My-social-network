@@ -1,9 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import modClass from './Aside.module.css';
+import Friend from "./Friend/Friend";
 
 
-const Aside = () => {
+const Aside = (props) => {
 	return (
 		<aside className={modClass.wrapper}>
 			<nav className={modClass.nav}>
@@ -13,6 +14,9 @@ const Aside = () => {
 				<NavLink to='/music' activeClassName={modClass.active}>Music</NavLink>
 				<NavLink to='/settings' activeClassName={modClass.active}>Settings</NavLink>
 			</nav>
+
+			<Friend friendData={props.sidebar.friendData} />
+
 		</aside>
 	);
 }

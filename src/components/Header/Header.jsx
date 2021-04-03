@@ -1,14 +1,13 @@
 import React from 'react';
-import logo from '../../images/logo.png';
 import modClass from './Header.module.css'
 import SwitchTheme from "./SwitchTheme/SwithTheme";
 
 
-const Header = () => {
+const Header = (props) => {
 	return (
 		<header className={modClass.wrapper}>
 			<a href="/">
-				<img src={logo} alt="as"/>
+				<img src={props.header.logo_src} alt="logo"/>
 			</a>
 			<SwitchTheme />
 		</header>

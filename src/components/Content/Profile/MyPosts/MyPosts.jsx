@@ -3,24 +3,29 @@ import modClass from './MyPosts.module.css';
 import Post from "./Post/Post";
 
 
-function MyPosts(props) {
+const MyPosts = (props) => {
 
-    let postData = [
-        {id: 1, message: 'Hi, how are you?', likesCount: 23, disLikesCount: 3},
-        {id: 2, message: 'It is my first post', likesCount: 25, disLikesCount: 5},
-    ]
+    let newPostElement = React.createRef()
+    let addPost = () => {
+        props.addPost()
+    }
 
-    let posts = postData.map( post => <Post message={post.message} id={post.id} likesCount={post.likesCount} disLikesCount={post.disLikesCount}/>)
+    let onPostChange = ( () => {
+        let PostMessage = newPostElement.current.value
+        props.updateNewPost(PostMessage)
+    })
+
+    let posts = props.postData.map( post => <Post message={post.message} key={post.id} likesCount={post.likesCount} disLikesCount={post.disLikesCount} src={post.src}/>)
 
     return (
         <div className={modClass.wrapper}>
             <h3>MyPosts</h3>
             <div>
-                <div>
-                    <textarea></textarea>
+                <div className={modClass.textarea_wrapper}>
+                    <textarea ref={newPostElement} className={modClass.textarea} onChange={onPostChange} value={props.newMessage} />
                 </div>
                 <div>
-                    <button>Add Post</button>
+                    <button onClick={ addPost }>Add Post</button>
                 </div>
             </div>
 

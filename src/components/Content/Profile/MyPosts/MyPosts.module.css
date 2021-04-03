@@ -1,3 +1,11 @@
 .wrapper {
     font-size: 16px;
 }
+
+.textarea_wrapper {
+    width: 100%;
+}
+
+.textarea {
+    max-width: 100%;
+}

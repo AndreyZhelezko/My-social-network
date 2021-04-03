@@ -11,11 +11,19 @@ import Settings from './Settings/Settings';
 const Content = (props) => {
 	return (
 		<div className={modClass.wrapper}>
-			<Route exact path='/' component={Profile} />
-			<Route path='/messages' component={Messages} />
-			<Route path='/news' component={News} />
-			<Route path='/music' component={Music} />
-			<Route path='/settings' component={Settings} />
+			<Route exact path='/' render={ ()=> <Profile
+				profilePage={props.profilePage}
+				addPost={props.addPost}
+				updateNewPost={props.updateNewPost}
+			/> } />
+			<Route path='/messages' render={ ()=> <Messages
+				massagesPage={props.massagesPage}
+				addMessage={props.addMessage}
+				updateNewMessage={props.updateNewMessage}
+			/> } />
+			<Route path='/news' render={ ()=> <News /> } />
+			<Route path='/music' render={ ()=> <Music /> } />
+			<Route path='/settings' render={ ()=> <Settings /> } />
 		</div>
 	);
 }

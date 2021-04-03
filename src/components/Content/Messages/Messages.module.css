@@ -15,7 +15,21 @@
 .massages_wrapper {
 	width: 75%;
 	min-width: 300px;
+
+}
+
+.massages_wrapper ul {
 	padding: 0;
 	margin: 0;
 	list-style-type: none;
+}
+
+
+.textarea_wrapper {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.textarea {
+	max-width: 100%;
 }
