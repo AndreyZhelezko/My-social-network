@@ -20,10 +20,7 @@ const App = (props) => {
                 <Content
                     profilePage={props.state.profilePage}
                     massagesPage={props.state.massagesPage}
-                    addPost={props.addPost}
-                    addMessage={props.addMessage}
-                    updateNewPost={props.updateNewPost}
-                    updateNewMessage={props.updateNewMessage}
+                    dispatch={props.dispatch}
                 />
             </main>
             <Footer/>

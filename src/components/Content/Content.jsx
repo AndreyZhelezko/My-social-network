@@ -13,13 +13,11 @@ const Content = (props) => {
 		<div className={modClass.wrapper}>
 			<Route exact path='/' render={ ()=> <Profile
 				profilePage={props.profilePage}
-				addPost={props.addPost}
-				updateNewPost={props.updateNewPost}
+				dispatch={props.dispatch}
 			/> } />
 			<Route path='/messages' render={ ()=> <Messages
 				massagesPage={props.massagesPage}
-				addMessage={props.addMessage}
-				updateNewMessage={props.updateNewMessage}
+				dispatch={props.dispatch}
 			/> } />
 			<Route path='/news' render={ ()=> <News /> } />
 			<Route path='/music' render={ ()=> <Music /> } />
