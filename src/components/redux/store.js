@@ -58,8 +58,8 @@ let store = {
     getState () {
         return this._state
     },
-    rerender(Rendering) {
-        this._callSubscriber = Rendering
+    subscribe(observer) {
+        this._callSubscriber = observer
     },
 
     dispatch(action) {
