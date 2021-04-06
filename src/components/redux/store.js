@@ -1,3 +1,8 @@
+import profileReducer from "./profile-reducer";
+import massageReducer from "./massage-reducer";
+import headerReducer from "./header-reducer";
+import sidebarReducer from "./sidebar-reducer";
+
 let store = {
     _state: {
         header: {
@@ -58,35 +63,12 @@ let store = {
     },
 
     dispatch(action) {
-        if (action.type === 'ADD-POST') {
-            let newPost = {
-                id: 5,
-                message: this._state.profilePage.newMessage,
-                likesCount: 0,
-                disLikesCount: 0,
-                src: `${window.location.origin}/images/default_ava.jpg`
-            }
-            this._state.profilePage.postData.push(newPost)
-            this._state.profilePage.newMessage = ''
-            this._callSubscriber(this._state)
-        }
-        else if (action.type === 'ADD-MESSAGE') {
-            let newMessages = {
-                id: 3,
-                message: this._state.massagesPage.newMessage
-            }
-            this._state.massagesPage.massagesData.push(newMessages)
-            this._state.massagesPage.newMessage = ''
-            this._callSubscriber(this._state)
-        }
-        else if (action.type === 'UPDATE-NEW-POST') {
-            this._state.profilePage.newMessage = action.newText
-            this._callSubscriber(this._state)
-        }
-        else if (action.type === 'UPDATE-NEW-MESSAGE') {
-            this._state.massagesPage.newMessage = action.newText
-            this._callSubscriber(this._state)
-        }
+        this._state.header = headerReducer(this._state.header, action);
+        this._state.sidebar = sidebarReducer(this._state.sidebar, action);
+        this._state.profilePage = profileReducer(this._state.profilePage, action);
+        this._state.massagesPage = massageReducer(this._state.massagesPage, action);
+
+        this._callSubscriber(this._state)
     }
 }
 

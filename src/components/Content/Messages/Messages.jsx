@@ -2,7 +2,7 @@ import React from 'react'
 import modClass from './Messages.module.css';
 import DialogItem from "./DialogItem/DialogItem";
 import MassagesItem from "./MassagesItem/MassagesItem";
-
+import {addMessageActionCreator, onMessageChangeActionCreator} from "../../redux/massage-reducer";
 
 const Messages = (props) => {
 	let dialogsElements = props.massagesPage.dialogsData.map( dialog => <DialogItem name={dialog.name} id={dialog.id} src={dialog.src} /> )
@@ -11,12 +11,12 @@ const Messages = (props) => {
     let newMessageElement = React.createRef();
 
 	let addMessage = () => {
-        props.dispatch({type: 'ADD-MESSAGE'})
+        props.dispatch(addMessageActionCreator())
     }
 
     let onMessageChange = ( () => {
         let newMessage = newMessageElement.current.value;
-        props.dispatch({type: 'UPDATE-NEW-MESSAGE', newText: newMessage})
+        props.dispatch(onMessageChangeActionCreator(newMessage))
     })
 
     return (
