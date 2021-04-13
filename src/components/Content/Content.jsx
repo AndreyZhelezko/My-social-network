@@ -8,15 +8,11 @@ import Settings from './Settings/Settings';
 import MessagesContainer from "./Messages/MessagesContainer";
 
 
-const Content = (props) => {
+const Content = () => {
 	return (
 		<div className={modClass.wrapper}>
-			<Route exact path='/' render={ ()=> <Profile
-				store={props.store}
-			/> } />
-			<Route path='/messages' render={ ()=> <MessagesContainer
-				store={props.store}
-			/> } />
+			<Route exact path='/' render={ ()=> <Profile /> } />
+			<Route path='/messages' render={ ()=> <MessagesContainer /> } />
 			<Route path='/news' render={ ()=> <News /> } />
 			<Route path='/music' render={ ()=> <Music /> } />
 			<Route path='/settings' render={ ()=> <Settings /> } />

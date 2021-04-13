@@ -1,26 +1,28 @@
 import React from 'react'
 import {addMessageActionCreator, onMessageChangeActionCreator} from "../../redux/massage-reducer";
 import Messages from "./Messages";
+import {connect} from "react-redux";
 
-const MessagesContainer = (props) => {
-    let state = props.store.getState()
 
-	let addMessage = () => {
-        props.store.dispatch(addMessageActionCreator())
+const mapStateToProps = (state) => {
+    return {
+        dialogsData: state.massagesPage.dialogsData,
+        massagesData: state.massagesPage.massagesData,
+        newMessage: state.massagesPage.newMessage
     }
-
-    let onMessageChange = (newMessage) => {
-        props.store.dispatch(onMessageChangeActionCreator(newMessage))
-    }
-
-    return (
-        <Messages addMessage={addMessage}
-                  updateNewMessageText ={onMessageChange}
-                  dialogsData={state.massagesPage.dialogsData}
-                  massagesData={state.massagesPage.massagesData}
-                  newMessage={state.massagesPage.newMessage}
-        />
-    );
 }
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addMessage: () => {
+            dispatch(addMessageActionCreator())
+        },
+        updateNewMessageText : (newMessage) => {
+            dispatch(onMessageChangeActionCreator(newMessage))
+        }
+    }
+}
+
+const MessagesContainer = connect(mapStateToProps, mapDispatchToProps)(Messages)
 
 export default MessagesContainer;

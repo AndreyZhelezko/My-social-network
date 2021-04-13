@@ -17,7 +17,7 @@ const App = (props) => {
             <Header header={props.store.getState().header}/>
             <main className="main">
                 <Aside sidebar={props.store.getState().sidebar}/>
-                <Content store={props.store}/>
+                <Content />
             </main>
             <Footer/>
         </div>

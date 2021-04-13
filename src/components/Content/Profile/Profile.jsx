@@ -4,13 +4,11 @@ import ProfileInfo from "./MyPosts/ProfileInfo/ProfileInfo";
 import MyPostsContainer from "./MyPosts/MyPostsContainer";
 
 
-const Profile = (props) => {
+const Profile = () => {
 	return (
 		<div className={modClass.wrapper}>
 			<ProfileInfo />
-			<MyPostsContainer
-				store={props.store}
-			/>
+			<MyPostsContainer />
 		</div>
 	);
 }
