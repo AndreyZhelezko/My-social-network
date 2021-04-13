@@ -21,18 +21,24 @@ let initialState = {
 const massageReducer = (state = initialState, action) => {
 
     switch (action.type) {
-        case ADD_MESSAGE :
+        case ADD_MESSAGE : {
             let newMessages = {
                 id: 3,
                 message: state.newMessage
             }
-            state.massagesData.push(newMessages)
-            state.newMessage = ''
-            return state
+            let stateCopy = {...state}
+            stateCopy.massagesData = [...state.massagesData]
+            stateCopy.massagesData.push(newMessages)
+            stateCopy.newMessage = ''
+            return stateCopy
+        }
 
-        case UPDATE_NEW_MESSAGE:
-            state.newMessage = action.newText
-            return state
+        case UPDATE_NEW_MESSAGE: {
+            let stateCopy = {...state}
+            stateCopy.newMessage = {...state.newMessage}
+            stateCopy.newMessage = action.newText
+            return stateCopy
+        }
 
         default:
             return state

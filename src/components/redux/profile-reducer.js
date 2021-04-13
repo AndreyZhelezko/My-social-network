@@ -23,7 +23,7 @@ let initialState = {
 
 const profileReducer = (state = initialState, action) => {
     switch (action.type) {
-        case ADD_POST :
+        case ADD_POST : {
             let newPost = {
                 id: 5,
                 message: state.newMessage,
@@ -31,13 +31,19 @@ const profileReducer = (state = initialState, action) => {
                 disLikesCount: 0,
                 src: `${window.location.origin}/images/default_ava.jpg`
             }
-            state.postData.push(newPost)
-            state.newMessage = ''
-            return state
+            let stateCopy = {...state}
+            stateCopy.postData = [...state.postData]
+            stateCopy.postData.push(newPost)
+            stateCopy.newMessage = ''
+            return stateCopy
+        }
 
-        case UPDATE_NEW_POST :
-            state.newMessage = action.newText
-            return state
+        case UPDATE_NEW_POST : {
+            let stateCopy = {...state}
+            stateCopy.newMessage = {...state.newMessage}
+            stateCopy.newMessage = action.newText
+            return stateCopy
+        }
 
         default :
             return state
