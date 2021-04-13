@@ -14,14 +14,10 @@ library.add(fab, fas)
 const App = (props) => {
     return (
         <div className="wrapper_App">
-            <Header header={props.state.header}/>
+            <Header header={props.store.getState().header}/>
             <main className="main">
-                <Aside sidebar={props.state.sidebar}/>
-                <Content
-                    profilePage={props.state.profilePage}
-                    massagesPage={props.state.massagesPage}
-                    dispatch={props.dispatch}
-                />
+                <Aside sidebar={props.store.getState().sidebar}/>
+                <Content store={props.store}/>
             </main>
             <Footer/>
         </div>
