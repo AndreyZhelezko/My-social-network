@@ -6,6 +6,7 @@ import News from './News/News';
 import Music from './Music/Music';
 import Settings from './Settings/Settings';
 import MessagesContainer from "./Messages/MessagesContainer";
+import UsersContainer from "./Users/UsersContainer";
 
 
 const Content = () => {
@@ -15,6 +16,7 @@ const Content = () => {
 			<Route path='/messages' render={ ()=> <MessagesContainer /> } />
 			<Route path='/news' render={ ()=> <News /> } />
 			<Route path='/music' render={ ()=> <Music /> } />
+			<Route path='/users' render={ ()=> <UsersContainer /> } />
 			<Route path='/settings' render={ ()=> <Settings /> } />
 		</div>
 	);

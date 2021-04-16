@@ -12,6 +12,7 @@ const Aside = (props) => {
 				<NavLink to='/messages' activeClassName={modClass.active}>Messages</NavLink>
 				<NavLink to='/news' activeClassName={modClass.active}>News</NavLink>
 				<NavLink to='/music' activeClassName={modClass.active}>Music</NavLink>
+				<NavLink to='/users' activeClassName={modClass.active}>Users</NavLink>
 				<NavLink to='/settings' activeClassName={modClass.active}>Settings</NavLink>
 			</nav>
 
